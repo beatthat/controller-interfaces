@@ -1,0 +1,30 @@
+{
+  "name": "unity-controller-interfaces",
+  "version": "0.0.1",
+  "description": "interfaces for (MVCish) controller implementations. Broken out into their own package so that other packages can depend on just the interfaces",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beatthat/unity-controller-interfaces.git"
+  },
+  "files": [
+    "index.js",
+    "scripts",
+    "src"
+  ],
+  "author": "larrykirschner@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/beatthat/unity-controller-interfaces/issues"
+  },
+  "homepage": "https://github.com/beatthat/unity-controller-interfaces",
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js",
+    "install:test": "rm -f *.tgz && npm pack && cd test && npm run clean && npm install"
+  },
+  "dependencies": {
+    "ncp": "^2.0.0",
+    "mkdirp": "^0.5.1",
+    "unity-bindings": "beatthat/unity-bindings#semver:^0.0.3"
+  }
+}
