@@ -2,7 +2,7 @@
 /// Core interface common to all presenters.
 /// </summary>
 using UnityEngine;
-
+using UnityEngine.Events;
 
 namespace BeatThat
 {
@@ -57,9 +57,20 @@ namespace BeatThat
 	public interface IController<ModelType> : IController, HasModel
 		where ModelType : class
 	{
-		ModelType model { get; set; }
+        /// <summary>
+        /// Invoked immediately before the model is replaced
+        /// </summary>
+        UnityEvent<ControllerModelUpdate<ModelType>> onModelWillUpdate { get; }
+
+        /// <summary>
+        /// Invoked immediately after the model is replaced. The old/prev model is passed as param
+        /// </summary>
+        UnityEvent<ControllerModelUpdate<ModelType>> onModelDidUpdate { get; }
+
+		ModelType model { get; }
 
 		void GoWith(ModelType model);
+
 	}
 
 	public interface IController<ModelType, ViewType> : IController<ModelType>, HasView
