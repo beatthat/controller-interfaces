@@ -36,7 +36,8 @@
   "dependencies": {
     "path": "^0.12.7",
     "unity-npm-utils": "github:beatthat/unity-npm-utils#semver:^1.0.0",
-    "bindings": "beatthat/bindings#semver:^1.0.0"
+    "bindings": "beatthat/bindings#semver:^1.0.0",
+    "property-interfaces": "beatthat/property-interfaces#semver:^1.0.0"
   },
   "devDependencies": {}
 }

@@ -1,7 +1,6 @@
-
-namespace BeatThat
+namespace BeatThat.Controllers
 {
-	public interface IViewPlacement
+    public interface IViewPlacement
 	{
 		IView view { get; }
 
@@ -10,3 +9,5 @@ namespace BeatThat
 		void Delete();
 	}
 }
+
+

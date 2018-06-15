@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace BeatThat
+namespace BeatThat.Controllers
 {
-	public interface IView
+    public interface IView
 	{
 		IController controller { get; }
 
@@ -12,3 +12,4 @@ namespace BeatThat
 		void Release();
 	}
 }
+

@@ -1,11 +1,12 @@
 using System;
+using BeatThat.Properties;
 
-namespace BeatThat
+namespace BeatThat.Controllers
 {
-	/// <summary>
-	/// A presenter that has a model.
-	/// </summary>
-	public interface HasModel : IController
+    /// <summary>
+    /// A presenter that has a model.
+    /// </summary>
+    public interface HasModel : IController
 	{
         /// <summary>
         /// Set the model.
@@ -30,3 +31,4 @@ namespace BeatThat
 		Type GetModelType();
 	}
 }
+

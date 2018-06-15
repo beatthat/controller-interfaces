@@ -1,13 +1,14 @@
+using BeatThat.Bindings;
 /// <summary>
 /// Core interface common to all presenters.
 /// </summary>
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace BeatThat
+namespace BeatThat.Controllers
 {
-	public interface IController : HasBinding
-	{
+    public interface IController : HasBinding
+    {
 		GameObject gameObject { get; }
 
 		Transform transform { get; }
@@ -53,6 +54,13 @@ namespace BeatThat
 		/// </summary>
 		void Hide(bool hide);
 	}
+
+  public struct ControllerModelUpdate<ModelType> where ModelType : class
+    {
+        public IController<ModelType> controller;
+        public ModelType modelFrom;
+        public ModelType modelTo;
+    }
 
 	public interface IController<ModelType> : IController, HasModel
 		where ModelType : class
