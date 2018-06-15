@@ -1,7 +1,7 @@
 {
   "name": "controller-interfaces",
   "scope": "beatthat",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "interfaces for (MVCish) controller implementations. Broken out into their own package so that other packages can depend on just the interfaces",
   "main": "index.js",
   "repository": {
