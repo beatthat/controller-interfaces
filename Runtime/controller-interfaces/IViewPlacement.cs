@@ -6,7 +6,7 @@ namespace BeatThat.Controllers
 
 		void EnsureCreated();
 
-		void Delete();
+		void Release();
 	}
 }
 
